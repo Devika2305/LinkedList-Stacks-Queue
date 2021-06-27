@@ -4,6 +4,18 @@ public class MiddleElement {
 	Node head;
 	int count = 0;
 	
+	void middle() {
+		Node slow = head;
+		Node fast = head;
+		if(head != null) {
+			while(fast!= null && fast.next != null) {
+				fast = fast.next.next;
+				slow = slow.next;
+			}
+			System.out.println("Middle element is "+slow.data);
+		}
+	}
+	
 	void add(int data) {  // insert element at last
 		Node toAdd = new Node(data);
 		
@@ -56,6 +68,13 @@ public class MiddleElement {
 		MiddleElement obj = new MiddleElement();
 		
 		obj.add(10);
+		obj.add(20);
+		obj.add(30);
+		obj.add(40);
+		obj.add(50);
+		obj.add(60);
+		obj.add(70);
 		obj.print();
+		obj.middle();
 	}
 }
