@@ -4,7 +4,7 @@ public class NextGreater {
 
 	public static void main(String[] args) {
 		
-		int arr[] = {1,3,2,4};
+		int arr[] = {1,3,2,4,5};
 		int i = 0;
 		int n = arr.length;
 		Stack s = new Stack();
